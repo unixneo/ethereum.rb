@@ -9,29 +9,22 @@ require "ethereum/version"
 Gem::Specification.new do |spec|
   spec.name          = "ethereum.rb"
   spec.version       = Ethereum::VERSION
-  spec.authors       = ["Marek Kirejczyk"]
+  spec.authors       = ["Marek Kirejczyk", "Neo"]
   spec.email         = ["marek.kirejczyk@gmail.com"]
 
   spec.summary       = %q{Ruby Ethereum client using the JSON-RPC interface}
   spec.description   = %q{Ethereum.rb is Ruby Ethereum client using the JSON-RPC interface. Provides interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node.}
-  spec.homepage      = "https://github.com/q9f/eth.rb"
+  spec.homepage      = "https://github.com/unixneo/ethereum.rb"
   spec.license       = "MIT"
 
   spec.metadata = {
-    "bug_tracker_uri" => "https://github.com/q9f/eth.rb/issues",
-    "changelog_uri" => "https://github.com/q9f/eth.rb/blob/main/CHANGELOG.md",
-    "documentation_uri" => "https://q9f.github.io/eth.rb/",
-    "github_repo" => "https://github.com/q9f/eth.rb",
-    "source_code_uri" => "https://github.com/q9f/eth.rb",
+    "bug_tracker_uri" => "https://github.com/unixneo/ethereum.rb/issues",
+    "changelog_uri" => "https://github.com/unixneo/ethereum.rb/blob/main/CHANGELOG.md",
+    "documentation_uri" => "https://github.com/unixneo/ethereum.rb",
+    "github_repo" => "https://github.com/unixneo/ethereum.rb",
+    "source_code_uri" => "https://github.com/unixneo/ethereum.rb",
   }.freeze
 
-  if false
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
